@@ -1,4 +1,4 @@
-# Extended-Bag-of-Tracklet
+# Extended-Bag-of-Tracklets
 
 This is the implementation of the paper "Aghaei, M., Dimiccoli, M., & Radeva, P. (2016). Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams. Computer Vision and Image Understanding, 149, 146-156." which is meant to be for research purpose only. If you used the code, please cite the paper. 
 
