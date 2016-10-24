@@ -7,15 +7,15 @@ Maedeh Aghaei
 
 # How to use the code:
 
-1- put imagese of the sequence into folder "data", inside the folder "[sequece number]".
+1- Put imagese of the sequence into folder "data", inside the folder "[sequece number]".
 
 2- Open the main.m function and set the paths.
 
-Note: the code functionality is highly dependent on thresholds. We set all the threshold as indicated in the paper and kept them fixed through all the experiments. However, they are chosen in the way to achieve highest performance over our own dataset of images. For different sort of images, a tuning might be required.
+Note: We set all thresholds as indicated in the paper and kept them fixed through all the experiments. However, they have been tuned to optimize the performances on our dataset. For different datasets, a tuning might be required.
 
 3- Run the main.m function.
 
-4- final prototypes will be saved in the folder "prototype" inside the folder "output".
+4- Final prototypes are saved in the folder "prototype" inside the folder "output".
 
 # ACKNOWLEDGEMENTS
 
