@@ -1,0 +1,25 @@
+inDir = dir(inPath);
+isDir = [inDir(:).isdir];
+inList = {inDir(isDir).name}';
+inList(ismember(inList,{'.','..'})) = [];
+inLength = length(inList);
+
+for foldnum = 1:inLength
+    foldName = cell2mat(inList(foldnum));
+    savePath = fullfile(inPath,foldName,'');
+    mkdir(savePath);
+    imgPath = strcat(inPath,foldName,'/','data');
+    imgDir = dir(strcat(imgPath,'/','*.jpg'));
+    imgLength = length(imgDir);
+    counter=0;
+
+    for i = 1:imgLength 
+        imgName = imgDir(i).name;
+        im = imread([imgPath '/' imgName]);
+    end
+    
+    a=imread('1.jpg');
+c=imresize(b, [512 512]);
+imwrite(c,'1f.jpg');
+figure,imshow(a,[]);
+figure,imshow(c,[]);
