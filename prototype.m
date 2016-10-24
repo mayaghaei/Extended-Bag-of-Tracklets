@@ -10,9 +10,6 @@
 mkdir (prPath);
 for foldnum = 2:inLength
     foldName = cell2mat(inList(foldnum));
-
-%     foldName = 'new';
-
     currentTrPath = [trPath foldName];
     trDir = dir(strcat(currentTrPath,'/*.mat'));
     trLength = length (trDir);%not necessary

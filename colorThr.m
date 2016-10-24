@@ -1,5 +1,4 @@
-%auxilary script to experimentally decide which color threshold should be
-%choosen
+%auxilary script to experimentally decide which color threshold should be choosen
 
 img = imread('input/2/data/161206.jpg');
 imgAux = imread('input/2/data/161104.jpg');
