@@ -1,6 +1,10 @@
 # Extended-Bag-of-Tracklet
 
+<<<<<<< HEAD
 This is the implementation of the paper "Aghaei, M., Dimiccoli, M., & Radeva, P. (2016). Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams. Computer Vision and Image Understanding, 149, 146-156." which is meant to be for research purpose only. If you used the paper, please cite it. 
+=======
+This is the implementation of the paper "Aghaei, M., Dimiccoli, M., & Radeva, P. (2016). Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams. Computer Vision and Image Understanding, 149, 146-156." which is meant to be for research purpose only. If you used the code, please cite the paper. 
+>>>>>>> origin/master
 
 Creater & Maintainer
 Maedeh Aghaei
@@ -11,14 +15,22 @@ Maedeh Aghaei
 
 2- Open the main.m function and set the paths.
 
+<<<<<<< HEAD
 Note: the code functionality is highly dependent on thresholds. We set all the threshold as indicated in the paper and kept them fixed through all the experiments. However, they are chosen in the way to achieve highest performance over our own dataset of images. For different sort of images, a tuning might be required.
+=======
+Note: the code functionality is highly dependent on the thresholds. We set all the threshold as indicated in the paper and kept them fixed through all the experiments. However, they are chosen in the way to achieve highest performance over our own dataset. For different sort of images, a tuning might be required.
+>>>>>>> origin/master
 
 3- Run the main.m function.
 
 4- final prototypes will be saved in the folder "prototype" inside the folder "output".
 
 
+<<<<<<< HEAD
 #ACKNOWLEDGEMENTS
+=======
+# ACKNOWLEDGEMENTS
+>>>>>>> origin/master
 * The deepmatching code folder included is provided by Philippe Weinzaepfel et al. and downloaded from (http://lear.inrialpes.fr/src/deepmatching/). The corresppodning paper for citation is:
 @inproceedings{weinzaepfel:hal-00873592,
   AUTHOR = {Weinzaepfel, Philippe and Revaud, Jerome and Harchaoui, Zaid and Schmid, Cordelia},
