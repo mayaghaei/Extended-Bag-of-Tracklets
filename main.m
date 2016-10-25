@@ -62,6 +62,9 @@ fprintf('Prototypes extracted successfully! press any key to continue\n') ;
 pause;
 
 %% Occlusion treatment
+run('finalPrototype');
+fprintf('Final prototypes are extracted successfully! Find them in the folder "output\prototype" \n') ;
+pause;
 
 %% Show results
 
