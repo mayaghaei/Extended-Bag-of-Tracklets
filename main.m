@@ -27,6 +27,7 @@ confPath = 'output/confidence/';
 
 %% variables
 colorThr = 12;%10;higher include more examples
+occThr = 0.12; % occlusion threshold
 imgType = '.jpg';%change this if you have want to use another image type
 
 %% Generate Seeds
