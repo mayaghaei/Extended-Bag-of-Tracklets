@@ -10,19 +10,16 @@
 % clear all
 
 %Initials
-threshold=0.15;
+threshold=BOTThr;
 
 for foldnum = 1:inLength
     foldName = cell2mat(inList(foldnum));
-% foldName = '38';
     clear track
     currentTrPath = strcat(trPath,foldName);
     trDir = dir(strcat(currentTrPath,'/*.mat'));
     trLength = length (trDir);
     
     x=0;
-
-    % foldName = '28';
 
     tr_path = strcat(trPath,foldName);%tracklet path-set
     t_path_d = dir([tr_path '/*.mat']);
