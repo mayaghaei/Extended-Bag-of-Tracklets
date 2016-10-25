@@ -6,13 +6,13 @@ mkdir(trPath);
 
 for foldnum = 1:inLength
     foldName = cell2mat(inList(foldnum));
-    currentTrPath = strcat(trPath,foldName);
+    currentTrPath = [trPath,foldName];
     mkdir(currentTrPath);
-    imgPath = strcat(inPath,foldName,'/','data/');
-    imgDir = dir(strcat(imgPath,'*',imgType));
+    imgPath = [inPath,foldName,'/','data/'];
+    imgDir = dir([imgPath,'*',imgType]);
     imgLength = length(imgDir);
     % load seed data
-    currentSeedPath = strcat(seedPath,foldName,'/seed.mat');
+    currentSeedPath = [seedPath,foldName,'/seed.mat'];
     seedDir = load(currentSeedPath);
     seedList = fieldnames(seedDir);%name list of generated seeds
     ls = length(seedList);%number of generated seeds
@@ -28,7 +28,7 @@ for foldnum = 1:inLength
 
         init = getfield(seedDir,{1},seedName,{':'});%coordination of seed
         numDet = length(init);% number of seeds in this frame
-        imgName = strcat(imgPath,seedOName,imgType);
+        imgName = [imgPath,seedOName,imgType];
         imgSeed = imread(imgName);
         
         % crop reference image (seed)
@@ -41,7 +41,7 @@ for foldnum = 1:inLength
             initstate = init(count);
 
             countStr = num2str(count);
-            seedNameSave = strcat(currentTrPath,'/',seedOName,'-',countStr,'.mat');
+            seedNameSave = [currentTrPath,'/',seedOName,'-',countStr,'.mat'];
             S.(seedName) = initstate;
             save(seedNameSave, '-struct', 'S');
             %propagation
