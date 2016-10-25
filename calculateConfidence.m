@@ -4,7 +4,7 @@
 mkdir(confPath);
 for foldnum = 1:inLength
     %***********for each folder in the Input%*********
-    foldName = cell2mat(inList(foldnum)); % foldName = '8';
+    foldName = cell2mat(inList(foldnum)); 
     currentConfPath = strcat(confPath,foldName);
     mkdir(currentConfPath);
     

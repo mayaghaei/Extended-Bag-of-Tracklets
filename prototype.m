@@ -11,12 +11,12 @@ mkdir (prPath);
 for foldnum = 2:inLength
     foldName = cell2mat(inList(foldnum));
     currentTrPath = [trPath foldName];
-    trDir = dir(strcat(currentTrPath,'/*.mat'));
+    trDir = dir([currentTrPath,'/*.mat']);
     trLength = length (trDir);%not necessary
     nameTrks = {trDir.name}';
     seqLength = length(dir([inPath foldName '/data/*.jpg']));
     
-    curBotPath = strcat (botPath,foldName,'/');
+    curBotPath = [botPath,foldName,'/'];
     bot = load([curBotPath,'botFinal.mat']);
     botInfo = {bot.track};
     botInfo = vertcat(botInfo{:});
@@ -28,6 +28,7 @@ for foldnum = 2:inLength
     for i=1:nBot
         botList=botInfo(i,:);
         nTracklet = max(find(noEmptyIndex(i,:)));
+        clear S
         for j=1:seqLength
             count = 0;
             distVec = zeros(1,((nTracklet^2)-nTracklet)/2);
@@ -78,8 +79,4 @@ for foldnum = 2:inLength
         save(seedNameSave, '-struct', 'S');
     end
 end
-    
-%         load this frame on these trackletand compare and choose the best
-%         one and save it
-
-    
+       

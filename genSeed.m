@@ -26,10 +26,10 @@ for foldnum = 1:inLength
     flag = 0;
     foldName = cell2mat(inList(foldnum));
     foldName
-    currentSeedPath = strcat(seedPath,foldName);
+    currentSeedPath = [seedPath,foldName];
     mkdir(currentSeedPath);
-    imgPath = strcat(inPath,foldName,'/','data');
-    imgDir = dir(strcat(imgPath,'/','*.jpg'));
+    imgPath = [inPath,foldName,'/','data'];
+    imgDir = dir([imgPath,'/','*.jpg']);
     imgLength = length(imgDir);
     counter=0;
     
@@ -57,7 +57,7 @@ for foldnum = 1:inLength
         end
         counter = counter+1;
         imgName = strrep(strcat('I_',imgName),'.jpg','');%to be checked
-        seedName = strcat(currentSeedPath,'/seed.mat');
+        seedName = [currentSeedPath,'/seed.mat'];
         S.(imgName) = init;
             if counter == 1
             save(seedName, '-struct', 'S');

@@ -1,6 +1,6 @@
 # Extended-Bag-of-Tracklets
 
-This is the implementation of the paper "Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams" which is meant to be for research purpose only. If you used the code, please cite the paper. 
+This is the implementation of the paper "Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams" which is meant to be for research purpose only. If you used the code, please cite the paper.
 
 @article{aghaei2016multi,
   title={Multi-face tracking by extended bag-of-tracklets in egocentric photo-streams},
@@ -12,7 +12,7 @@ This is the implementation of the paper "Multi-face tracking by extended bag-of-
   publisher={Elsevier}
 }
 
-Creater & Maintainer
+Creater & Maintainer,
 Maedeh Aghaei
 
 # How to use the code:

@@ -1,23 +1,21 @@
 % function excludeUnBot(foldName)
 
-threshold = 0.2;
+threshold = UnBOTThr;
 
 for foldnum = 1:inLength%comment
     foldName = cell2mat(inList(foldnum));%comment
 
-% foldName='new';%uncomment
-flag=0;
+    flag=0;
 
-curBotPath = [botPath foldName];
+    curBotPath = [botPath foldName];
+    curTrPath = [trPath foldName '/'];
 
-curTrPath = [trPath foldName '/'];
-
-bot = load([curBotPath '/bot.mat']);
-botInfo = {bot.track};
-botInfo = vertcat(botInfo{:});
-botFinal = botInfo;
-noEmptyIndex = ~cellfun(@isempty,botInfo); 
-nBot = max(find(noEmptyIndex(:,1)));
+    bot = load([curBotPath '/bot.mat']);
+    botInfo = {bot.track};
+    botInfo = vertcat(botInfo{:});
+    botFinal = botInfo;
+    noEmptyIndex = ~cellfun(@isempty,botInfo); 
+    nBot = max(find(noEmptyIndex(:,1)));
   
 for k=1:nBot
     botList=botInfo(k,:);

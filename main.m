@@ -27,6 +27,9 @@ confPath = 'output/confidence/';
 
 %% variables
 colorThr = 12;%10;higher include more examples
+occThr = 0.12; % occlusion threshold
+BOTThr = 0.15; % BOT threshold
+UnBOTThr = 0.2; % to exclude unreliable BOT threshold
 imgType = '.jpg';%change this if you have want to use another image type
 
 %% Generate Seeds
@@ -62,6 +65,9 @@ fprintf('Prototypes extracted successfully! press any key to continue\n') ;
 pause;
 
 %% Occlusion treatment
+run('finalPrototype');
+fprintf('Final prototypes are extracted successfully! Find them in the folder "output\prototype" \n') ;
+pause;
 
 %% Show results
 
