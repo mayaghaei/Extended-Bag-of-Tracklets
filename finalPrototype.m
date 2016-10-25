@@ -1,7 +1,6 @@
 % this code create final prototypes of a sequence by eliminating occluded
 % frames from it.
 
-occ
 for foldnum = 1:inLength
     foldName = cell2mat(inList(foldnum));
     GT = 1;
