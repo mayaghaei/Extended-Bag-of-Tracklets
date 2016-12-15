@@ -41,7 +41,7 @@ for i = start:step:fin
         if colorScore <= colorThr%imshow both crop and part
             bbx = [sampleImage.x(k) sampleImage.y(k) sampleImage.w(k) sampleImage.h(k)];
             imSave = imcrop(img,bbx);
-            imSave = imresize(imSave,[100,100]);
+            imSave = imresize(imSave,[128,128]);
             filename = ('output/cropped/2.jpg');
             imwrite(imSave,filename);
             curDMScore = deep_matching('output/cropped/1.jpg','output/cropped/2.jpg');
