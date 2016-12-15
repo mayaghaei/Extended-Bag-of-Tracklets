@@ -37,7 +37,7 @@ for foldnum = 1:inLength
         for count=1:numDet%for each seed...
             %make the primary tracklet file with the corresponding seed       
             Img1 = imcrop(imgSeed,[init(count).x init(count).y init(count).w init(count).h]);
-		 Img1 = imresize(Img1,[100,100]);
+		 Img1 = imresize(Img1,[128,128]);
                         
             saveName = ('output/cropped/1.jpg');
             imwrite(Img1,saveName)
